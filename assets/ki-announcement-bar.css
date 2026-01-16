@@ -1,0 +1,49 @@
+.announcement-bar-section {
+  position: sticky;
+  top: 0;
+}
+
+@media screen and (max-width: 989px) {
+  #shopify-section-sections--20331290886201__announcement-bar > div > div > slideshow-component > div > button.slider-button {
+    display: none;
+  }
+  #shopify-section-sections--20331290886201__announcement-bar > div > div {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+.announcement-bar-section {
+  min-height: 54px;
+}
+}
+
+#shopify-section-sections--20331290886201__announcement-bar > div{
+  display: flex;
+  align-items: center;
+}
+
+.announcement-bar__message {
+    font-family: "Gotham-Book";
+    font-size: var(--text-14);
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    @media(max-width:600px) {
+        font-size: var(--text-13);
+    }
+}
+
+@media(max-width:400px) {
+    .announcement-bar__message {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:370px) {
+    .announcement-bar__message {
+        font-size: 10px;
+    }
+}

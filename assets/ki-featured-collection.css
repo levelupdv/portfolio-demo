@@ -1,0 +1,186 @@
+/*.ki-collection.ki-plp-grid {
+    height: calc(100vh - var(--header-height-desktop));
+    position: relataive;
+    width: 100%;
+    margin: 0 auto;
+}
+*/
+
+.ki-products-container-title {
+    margin: 0 auto;
+    padding: 100px 0 60px;
+    background-color:#FAF3E1;
+    border-bottom: 1px solid rgb(231, 231, 231);
+
+    @media only screen and (max-width: 989px) {
+        padding: 60px 0;
+    }
+}
+
+.ki-collection .ki-title {
+    max-width: 100%;
+    padding: 0 20px;
+    color: var(--colorBlack);
+    font-size: var(--heading);
+    font-family: 'Gotham-Book';
+    margin: 0;
+    text-align: center;
+
+    @media only screen and (max-width: 989px) {
+        font-size: var(--headingMobile);
+    }
+}
+
+.ki-collection .ki-collection__feature__slider {
+    padding: 0;
+    max-width: 100%;
+}
+
+.ki-collection .ki-collection__feature__slider .ki-collection__feature-grid
+.ki-collection__feature-grid__item .ki-product-card-wrapper
+.ki-product-card-wrapper__card__inner .ki-card__card__content
+.card__badge.top.right {
+    padding-right: 40px;
+    padding-top: 40px;
+}
+
+.ki-collection .ki-collection__feature-grid {
+    margin-top: 0;
+    column-gap: 0px;
+    row-gap: 0px;
+}
+
+.ki-collection__feature-grid__item.grid__item.ki-grid-item {
+    width: 25%;
+    z-index: 1;
+    max-width: 100%;
+    min-height: 602px;
+}
+
+.ki-product-card-wrapper a, .ki-product-card-wrapper a:hover  {
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.ki-plp-grid .ki-product-card-wrapper__card__inner {
+    background-color: transparent;
+    height: 100%;
+}
+
+.ki-product-card-wrapper__card__inner {
+    min-height: 510px;
+}
+
+.ki-plp-grid .ki-card__media.card__media {
+    margin: auto;
+    background-color: var(--productCardColor);
+}
+
+.ki-card-media .ki-card-media__media img {
+    /* object-fit: contain;
+    min-width: 95%; */
+    object-fit: cover;
+    min-width: 100%;
+}
+
+.ki-plp-grid .ki-card-media.card__media {
+    margin: auto;
+    background-color: var(--productCardColor);
+}
+
+.ki-plp-grid .ki-card__card__content.card__content {
+        padding: 0;
+    }
+
+    .ki-plp-grid .ki-card__card__information.card__information {
+        background-color: transparent;
+        height: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 27px;
+    }
+    
+    .ki-card__card__heading {
+        font-family: "Gotham-Medium";
+        font-size: var(--text-18);
+        color: var(--colorBlack);
+        line-height: 30px;
+        padding-bottom: 6px;
+        text-transform: uppercase;
+        margin: 0px;
+        padding: 0px;
+        max-width: 80%;
+        margin: 0 auto;
+        white-space: nowrap;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .ki-card__card__content .ki-card__card__information .ki-price.price {
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+.ki-price .ki-price__container.price__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ki-price .ki-price__container .ki-price-item--regular {
+    padding-top: 12px;
+    color: var(--colorBlack);
+    font-family: Gotham-Medium;
+    font-size: var(--text-15);
+    margin: 0;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.ki-price__container .price-item {
+    padding-top: 12px;
+}
+
+ .ki-plp-grid .ki-card__card__content .quick-add {
+    margin-bottom: 27px;
+ }
+
+ .ki-plp-grid .ki-card__card__content .quick-add .quick-add__submit {
+    background-color: var(--colorlightBlack);
+    padding: 0 18px 0 18px;
+    color: var(--white);
+    border: 1px solid transparent;
+    width: fit-content;
+    min-width: fit-content;
+    margin: 0 auto;
+    font-family: 'Gotham-Medium';
+    font-size: var(--text-12);
+    line-height: var(--heading);
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+@media (max-width:1300px) {
+    .ki-collection__feature-grid__item.grid__item.ki-grid-item {
+        width: 50%;
+        max-width: 50%;
+        border-right: 0.5px solid rgb(231, 231, 231);
+        border-bottom: 1px solid rgb(231,231,231);
+    }
+}
+
+@media (max-width:600px) {
+    .ki-collection__feature-grid__item.grid__item.ki-grid-item {
+        width: 100%;
+        max-width: 100%;
+        border-right: 0.5px solid rgb(231, 231, 231);
+        border-bottom: 1px solid rgb(231,231,231);
+    }
+}
+
+

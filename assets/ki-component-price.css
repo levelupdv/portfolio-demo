@@ -1,0 +1,34 @@
+.ki-price.price {
+    margin-top: 32px!important;
+    margin-bottom: 32px;
+}
+
+.ki-product .price {
+    padding-bottom: 16px;
+    position: relative;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+@media screen and (min-width: 750px) {
+.price--large {
+    font-size: 1.8rem;
+}
+}
+
+.ki-product .ki-price__container .ki-price-item--regular, .ki-product .ki-price__container .price-item.price-item--sale {
+    font-family: Gotham-Medium;
+    font-size: 24px;
+    line-height: normal;
+    text-align: left;
+    color: #0e0e0e;
+}
+
+.ki-product .ki-price__container .price-item.price-item--sale {
+    font-family: Gotham-Book;
+    font-size: 16px;
+}
+
+.ki-product .price--on-sale .price__badge-sale {
+    margin-top: auto;
+    margin-bottom: auto;
+}

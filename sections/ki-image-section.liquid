@@ -1,0 +1,89 @@
+<div id="white" class="ki-container">
+  <div class="ki-image-container">
+    <div class="ki-image-overlay">
+    <div class="ki-image-wrapper">
+      
+      <!-- Desktop Image -->
+      <img src="{{ section.settings.desktop_image_url | image_url: width: 1720 }}"
+        alt="{{ section.settings.desktop_image_alt_text }}" width="auto" height="auto" class="ki-image-banner">
+
+      <!-- Mobile Image -->
+      <img src="{{ section.settings.mobile_image_url | image_url: width: 1720 }}"
+        alt="{{ section.settings.mobile_image_alt_text }}" width="auto" height="auto" class="ki-mobile-image-banner">
+        </div>
+    </div>
+
+    <div class="ki-block-image-content-container desktop bottom">
+      <div class="ki-block-image-contents desktop">
+        <h2 class=" ki-block-image-heading" style="color:#ffffff">{{ section.settings.banner_text | escape }}
+        </h2>
+      </div>
+      <div class="ki-block-contents desktop">
+        <p class="ki-block-subcontent #ffffff desktop" style="color:#ffffff">{{ section.settings.subcontent_text | escape }}
+        </p>
+        <a href="{{ section.settings.page }}" class="ki-btn ki-btn--white ">{{ section.settings.button_text | escape
+          }}</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Ki Image Section",
+"tag": "section",
+"class": "section",
+"disabled_on": {
+"groups": ["header", "footer"]
+},
+"settings": [
+{
+"type": "image_picker",
+"id": "desktop_image_url",
+"label": "Desktop Image URL",
+},
+{
+"type": "text",
+"id": "desktop_image_alt_text",
+"label": "Desktop Image Alternative Text"
+},
+{
+"type": "image_picker",
+"id": "mobile_image_url",
+"label": "Mobile Image URL",
+},
+{
+"type": "text",
+"id": "mobile_image_alt_text",
+"label": "Mobile Image Alternative Text"
+},
+{
+"type": "text",
+"id": "banner_text",
+"label": "Image Banner"
+},
+{
+"type": "text",
+"id": "subcontent_text",
+"label": "Banner Subcontent"
+},
+{
+"type": "text",
+"id": "button_text",
+"label": "button text"
+},
+{
+"type": "page",
+"id": "page",
+"label": "button Link"
+},
+],
+"presets": [
+{
+"name": "Ki Image Section",
+"category": "Custom"
+}
+]
+}
+{% endschema %}

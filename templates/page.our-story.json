@@ -1,0 +1,136 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "ki_our_story_ktFLGK": {
+      "type": "ki-our-story",
+      "name": "Ki Our-Story",
+      "settings": {
+        "desktop_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-01-1.webp",
+        "desktop_image_alt_text": "",
+        "mobile_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-01-1.webp",
+        "mobile_image_alt_text": "",
+        "banner_text": "Our Story",
+        "subcontent_text": "The story of a masterpiece",
+        "button_text": "",
+        "page": ""
+      }
+    },
+    "ki_our_story_V3EGKn": {
+      "type": "ki-our-story",
+      "name": "Ki Our-Story",
+      "settings": {
+        "desktop_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-02.webp",
+        "desktop_image_alt_text": "",
+        "mobile_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-02.webp",
+        "mobile_image_alt_text": "",
+        "banner_text": "The Science",
+        "subcontent_text": "Each bottle of Kiana fragrance is not only an artistic blend but also a precise scientific work. We use advanced techniques in extraction and filtration to obtain the highest quality of essential oils. Our team of specialists in chemistry and perfumery work together to develop unparalleled formulas, ensuring that each scent is not only fragrant but also long-lasting and stable.",
+        "button_text": "",
+        "page": ""
+      }
+    },
+    "ki_our_story_i8NHUN": {
+      "type": "ki-our-story",
+      "name": "Ki Our-Story",
+      "settings": {
+        "desktop_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-03.webp",
+        "desktop_image_alt_text": "",
+        "mobile_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-03.webp",
+        "mobile_image_alt_text": "",
+        "banner_text": "The Evolution",
+        "subcontent_text": "We don’t just settle for reaching the top; we continuously strive for innovation. Every season, we add a new touch to our fragrance collection, inspired by the latest trends in the perfume industry and technology. We are always developing new techniques to improve fragrance longevity and enhance its impact, ensuring that you enjoy a longer-lasting and refreshing experience throughout the day.",
+        "button_text": "",
+        "page": ""
+      }
+    },
+    "ki_our_story_U4hx4w": {
+      "type": "ki-our-story",
+      "name": "Ki Our-Story",
+      "settings": {
+        "desktop_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-04.webp",
+        "desktop_image_alt_text": "",
+        "mobile_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-04.webp",
+        "mobile_image_alt_text": "",
+        "banner_text": "The Artisans",
+        "subcontent_text": "Fragrance is not just crafted. It is composed, like a symphony. Our scents are born from the imagination and expertise of master perfumers who combine decades of experience with creative intuition. Every bottle is a tribute to luxury, discipline, and dedication, capturing the soul of true perfumery.",
+        "button_text": "",
+        "page": ""
+      }
+    },
+    "ki_our_story_MJCi9g": {
+      "type": "ki-our-story",
+      "name": "Ki Our-Story",
+      "settings": {
+        "desktop_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-05.webp",
+        "desktop_image_alt_text": "",
+        "mobile_image_url": "shopify://shop_images/WEB-NEW-PICTURE-02-05.webp",
+        "mobile_image_alt_text": "",
+        "banner_text": "The quality",
+        "subcontent_text": "We believe that quality is the foundation of everything. That’s why we conduct rigorous testing on every batch of perfumes to ensure they meet the highest standards. From stability testing to evaluating the balance of fragrances, each ingredient is carefully selected to ensure that every bottle delivers a luxurious and high-quality fragrance experience.",
+        "button_text": "",
+        "page": ""
+      }
+    },
+    "ki_rich_text_qR4iqk": {
+      "type": "ki-rich-text",
+      "blocks": {
+        "heading_bfKUqX": {
+          "type": "heading",
+          "settings": {
+            "heading": "FIND KIANA",
+            "heading_size": "h1"
+          }
+        },
+        "button_dqbzTP": {
+          "type": "button",
+          "settings": {
+            "button_label": "STORE LOCATOR",
+            "button_link": "shopify://pages/store-locator",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bfKUqX",
+        "button_dqbzTP"
+      ],
+      "name": "Ki Rich Text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ki_our_story_ktFLGK",
+    "ki_our_story_V3EGKn",
+    "ki_our_story_i8NHUN",
+    "ki_our_story_U4hx4w",
+    "ki_our_story_MJCi9g",
+    "ki_rich_text_qR4iqk"
+  ]
+}

@@ -1,0 +1,84 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brand_information_RBqmVT": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "link_list_YyjMHM": {
+          "type": "link_list",
+          "settings": {
+            "heading": "KAIANA",
+            "menu": "kiana"
+          }
+        },
+        "link_list_y4Nypg": {
+          "type": "link_list",
+          "settings": {
+            "heading": "CUSTOMER SERVICE",
+            "menu": "customer-service"
+          }
+        },
+        "link_list_46EaWR": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Legal",
+            "menu": "footer"
+          }
+        },
+        "newsletter_wXLyTz": {
+          "type": "newsletter",
+          "settings": {
+            "heading": "<strong>SIGN UP</strong>",
+            "text_top": "<p>Be the first to receive the latest news from Kiana Fragrances, including exclusive previews and special announcements.</p>",
+            "text_bottom": "<p>By clicking the subscribe button, you are accepting our <a href=\"/policies/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms and Conditions</a> and <a href=\"/policies/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Privacy Policy</a>. You can unsubscribe at any time.</p>"
+          }
+        },
+        "brand_information_DgXD3k": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        }
+      },
+      "block_order": [
+        "brand_information_RBqmVT",
+        "link_list_YyjMHM",
+        "link_list_y4Nypg",
+        "link_list_46EaWR",
+        "newsletter_wXLyTz",
+        "brand_information_DgXD3k"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "enable_follow_on_shop": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

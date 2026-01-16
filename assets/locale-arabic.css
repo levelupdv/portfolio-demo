@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "GraphikArabic";
+  src: url("https://cdn.shopify.com/s/files/1/0764/5151/2377/files/GraphikArabic-Regular.woff?v=1767658112"),
+    url("https://cdn.shopify.com/s/files/1/0764/5151/2377/files/GraphikArabic-Regular.woff2?v=1767658112"),
+    url("https://cdn.shopify.com/s/files/1/0764/5151/2377/files/GraphikArabic-Regular.ttf?v=1767658111");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GraphikArabic-Light";
+  src: url("https://cdn.shopify.com/s/files/1/0764/5151/2377/files/GraphikArabic-Light.woff?v=1767658128"),
+    url("https://cdn.shopify.com/s/files/1/0764/5151/2377/files/GraphikArabic-Light.woff2?v=1767658128"),
+    url("https://cdn.shopify.com/s/files/1/0764/5151/2377/files/GraphikArabic-Light.ttf?v=1767658127");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GraphikMedium";
+  src: url("https://cdn.shopify.com/s/files/1/0764/5151/2377/files/GraphikArabic-Medium.woff?v=1767658135"),
+    url("https://cdn.shopify.com/s/files/1/0764/5151/2377/files/GraphikArabic-Medium.woff2?v=1767658135"),
+    url("https://cdn.shopify.com/s/files/1/0764/5151/2377/files/GraphikArabic-Medium.ttf?v=1767658134");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.locale-arabic {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: isolate;
+  font-family: "GraphikArabic-Light";
+  letter-spacing: 0;
+}
+
+.locale-arabic h1,
+.locale-arabic h2,
+.locale-arabic h3,
+.locale-arabic h4,
+.locale-arabic .product__title,
+.locale-arabic .button,
+.locale-arabic .ki-btn,
+.locale-arabic .badge {
+  font-family: "GraphikArabic" !important;
+  letter-spacing: 0;
+}
+
+.locale-arabic p,
+.locale-arabic a,
+.locale-arabic span,
+.locale-arabic li,
+.locale-arabic label,
+.locale-arabic input,
+.locale-arabic textarea,
+.locale-arabic .rte {
+  font-family: "GraphikArabic-Light" !important;
+}
+
+.locale-arabic .product__media,
+.locale-arabic .slider,
+.locale-arabic .swiper,
+.locale-arabic .gallery {
+  direction: ltr;
+}
+
+.locale-arabic input::placeholder,
+.locale-arabic textarea::placeholder {
+  text-align: right;
+}
+
+.locale-arabic .icon-arrow,
+.locale-arabic .chevron {
+  transform: rotate(180deg);
+}
+
+.locale-arabic {
+  .slider-button--next .icon {
+    transform: rotate(-270deg);
+  }
+
+  .slider-button--prev .icon {
+    transform: rotate(270deg);
+  }
+  .slider-button--next:not([disabled]):hover .icon {
+    transform: rotate(-270deg) scale(1.1);
+  }
+
+  .slider-button--prev:not([disabled]):hover .icon {
+    transform: rotate(270deg) scale(1.1);
+  }
+  .slider .announcement-bar__announcement .announcement-bar__message.h5 > span {
+    font-family: GraphikArabic-Medium !important;
+    font-size: calc(var(--font-heading-scale) * 1.6rem);
+  }
+}
+
+.locale-arabic .disclosure__button span,
+.disclosure__item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.locale-arabic {
+  .country-flag {
+    vertical-align: top;
+  }
+  #HeaderCountryForm > div > div {
+    background-position: right;
+    padding-left: 0px;
+    padding-right: 20px;
+  }
+  .localization-form__select .icon-caret {
+    position: relative;
+    top: 0;
+  }
+}
+
+.header-wrapper
+  .header
+  .header__heading-logo-wrapper
+  .header__heading-logo {
+  max-width: 170px;
+}
+
+.locale-arabic .header__inline-menu .list-menu li > a,
+.header__inline-menu header-menu > details > .header__menu-item {
+  font-size: 18px !important;
+  font-weight: normal !important;
+  font-family: GraphikArabic-Light !important;
+}
+
+.locale-arabic .ki-container .ki-block-image-heading {
+  font-family: "GraphikArabic" !important;
+}
+
+.header__icon--cart {
+  margin-right: 0;
+  margin-left: -12px;
+}
+
+.locale-arabic details[open]>.header__submenu {
+    left: -145px;
+    width: 270px;
+  }
+
+.locale-arabic .header__submenu.list-menu {
+    padding: 1rem 0;
+  }
+
+.locale-arabic
+  .ki-plp-grid
+  .ki-card__card__content
+  .quick-add
+  .quick-add__submit {
+  font-size: var(--text-15);
+}
+
+#shopify-block-Ac2lCMUVSS2dHREVkW__ai_gen_block_96909f9_gDqnqk > luxury-feed-ac2lcmuvss2dhrevkwaigenblock96909f9gdqnqk > div.ai-luxury-feed__banner-ac2lcmuvss2dhrevkwaigenblock96909f9gdqnqk > div > div > p {
+  text-align: center !important;
+  font-size: 22px;
+}
+
+.locale-arabic {
+  .ki-newsletter
+    > .ki-newsletter__wrapper
+    .newsletter-form__field-wrapper
+    .field
+    .newsletter-form__button
+    span
+    .icon-arrow {
+    transform: rotate(0);
+  }
+
+  .footer__newsletter .field__label {
+    left: auto;
+    right: calc(var(--inputs-border-width) + 2rem);
+    text-align: right;
+  }
+
+  .footer__newsletter .field__input:focus ~ .field__label,
+  .footer__newsletter .field__input:not(:placeholder-shown) ~ .field__label,
+  .footer__newsletter .field__input:-webkit-autofill ~ .field__label {
+    left: auto;
+    right: calc(var(--inputs-border-width) + 2rem);
+  }
+}
+
+.locale-arabic {
+  .footer-block__brand-info .footer-block__heading {
+    font-family: GraphikArabic;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0px;
+    text-align: right;
+  }
+
+  .footer-block__brand-info .rte p {
+    text-align: right;
+  }
+
+  .footer__blocks-wrapper .list-unstyled.list-social.footer__list-social {
+    justify-content: start;
+  }
+
+  .footer__blocks-wrapper .footer-block__heading {
+    font-size: var(--text-18);
+    font-weight: 600;
+    font-family: GraphikArabic;
+    text-align: right;
+  }
+  .footer .footer__blocks-wrapper .link--text {
+    font-size: var(--text-18);
+    font-family: GraphikArabic-Light;
+    text-align: right;
+  }
+  .footer .footer__blocks-wrapper li {
+    margin-right: 0;
+  }
+  .footer-block__newsletter-text p {
+    text-align: right;
+  }
+  .footer .newsletter-form__field-wrapper {
+    text-align: right;
+  }
+}
+
+@media (max-width: 989px) {
+  .locale-arabic {
+    .footer__blocks-wrapper .footer-block__heading:after {
+      right: auto;
+      left: 0;
+    }
+
+    .footer__blocks-wrapper .footer-block__heading.minus:after {
+      right: auto;
+      left: 0;
+    }
+    .footer-block__brand-info .footer-block__heading {
+      text-align: center;
+    }
+  }
+}
+
+.locale-arabic {
+  .ki-collection .ki-collection__feature__slider .ki-collection__feature-grid
+.ki-collection__feature-grid__item .ki-product-card-wrapper
+.ki-product-card-wrapper__card__inner .ki-card__card__content
+.card__badge.top.right {
+    padding-right: 0px;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+}

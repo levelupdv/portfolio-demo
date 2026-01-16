@@ -1,0 +1,182 @@
+/* @media(min-width:990px) {
+    .header-wrapper {
+        min-height: 130px;
+    }
+} */
+
+.header-wrapper {
+    background-color: #222;
+}
+
+.section-header.shopify-section-header-sticky {
+    top: 38px;
+}
+
+.header-wrapper .header {
+    max-width: 1720px;
+    padding: 20px 20px 0;
+}
+
+.header__heading-link {
+    padding: 0px;
+}
+
+.header--middle-center:not(.drawer-menu) {
+    grid-template-areas:
+      'left-icons heading icons'
+      'navigation navigation navigation';
+      gap: 0;
+  }
+
+  .header--middle-center .header__inline-menu>.list-menu--inline {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header__inline-menu {
+    width: 100%;
+    max-width: 910px;
+    max-height: 70px;
+    justify-self: center;
+}
+
+.header__menu-item span {
+    position: relative;
+    padding-right: 10px;
+    margin-top: 31px;
+    padding: 0;
+    height: 37px;
+}
+
+header-menu>details>.header__menu-item span {
+    margin-top: 31px;
+    padding: 0;
+    height: 37px;
+}
+
+.header__menu-item {
+
+  padding: 0; !important
+
+}
+
+.header .header__icons .header__search {
+    display: block;
+    width: 80px;
+    margin-right: 80px;
+}
+
+sticky-header > header > div.header__icons.header__icons--localization.header-localization {
+    padding: 0px;
+}
+
+.header-wrapper .header .header__heading-link .header__heading-logo-wrapper > img:hover {
+
+    transform: scale(1.02);
+    transition: all 0.5s ease;
+
+}
+
+.header__inline-menu header-menu>details>.header__menu-item {
+    font-family: 'Gotham-Book';
+    font-size: var(--text-14);
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.header__menu-item:hover span {
+  text-decoration: none;
+}
+
+details[open] > .header__menu-item {
+  text-decoration: none;
+}
+
+.header__menu-item .icon-caret {
+  display: none;
+}
+
+.header__inline-menu .header__menu-item {
+    padding: 0;
+}
+
+
+.header__inline-menu .list-menu li>a {
+    font-family: "Gotham-Book";
+    font-size: var(--text-14);
+    display: flex;
+    height: 100%;
+}
+
+.header__inline-menu .header__submenu li> a:hover {
+    font-weight: 700;
+}
+
+.header__inline-menu .header__submenu li>a {
+    color: var(--offwhite);
+    font-size: var(--text-14);
+    font-family: "Gotham-Book";
+    padding: 10px 32px;
+}
+
+.header__submenu .header__menu-item {
+    text-decoration: none !important;
+    border: none;
+    font-size: 14px;
+}
+
+details[open]>.header__submenu {
+    background-color: #222;
+    width: 400px;
+    left: -40px;
+    padding: 16px 0;
+    z-index: 7;
+}
+
+#HeaderCountryForm > div > div {
+    background: url(world.svg)no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    background-size: 20px;
+}
+
+.country-flag {
+  margin-right: 0.5rem; /* Space between flag and ISO code */
+  vertical-align: middle;
+}
+
+.header__icon--search span::after {
+    content: "Search";
+    color: var(--offwhite);
+    font-family: Gotham-Light;
+    position: absolute;
+    left: 24px;
+    padding-left: 20px;
+}
+
+/* Mobile-Specific Styling */
+@media screen and (max-width: 989px) {
+  .header-wrapper .header {
+    padding: 10px 20px 10px;
+    }
+  .header .header__icons .header__search {
+    display: block;
+    width: 40px;
+    margin-right: 0px;
+    }
+    .header__icon--search span::after {
+    display: none;
+}
+}
+
+@media screen and (max-width: 580px) {
+.section-header.shopify-section-header-sticky {
+    top: 54px;
+}
+}
+
+.header__active-menu-item {
+    text-decoration: none;
+}

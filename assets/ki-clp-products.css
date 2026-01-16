@@ -1,0 +1,17 @@
+.badge {
+    /* background: #a57e7400; */
+    background:#4f4f4f;
+    font-family: Gotham-Medium;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color:rgb(255, 255, 255);
+    padding: 0 8px;
+    margin: 22px 0 0 22px;
+    border: 1px solid #4f4f4f;
+    border-radius: 0!important;
+    border-color: #4f4f4f!important;
+    text-transform: uppercase;
+    line-height: 20px;
+}

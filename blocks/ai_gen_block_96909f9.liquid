@@ -1,0 +1,1048 @@
+{% doc %}
+  @prompt
+    A full-width luxury Instagram-style feed block designed for a high-end fragrance brand. At the top, include a full-width, elegant text banner with refined typography for brand storytelling or campaign messaging. Below the banner, display a horizontal and grid-based feed inspired by Instagram, capable of showcasing both images and short videos sourced from the Shopify CDN media library. The media features cinematic perfume visuals, elegant bottle close-ups, architectural retail spaces, artisanal stone and mineral textures, and refined Middle Eastern cultural moments. The visual style is editorial and luxurious, with warm neutral tones, soft beige, sandstone hues, deep black contrasts, and subtle gold accents. Lighting is soft, natural, and premium, creating a calm, timeless, and sophisticated atmosphere that reflects craftsmanship, heritage, and modern luxury. Ideal for curated brand storytelling and social-style content presentation., video url should accept videos from shopify cdn library, the videos are not working, the videos type is mp4, the error is:
+    
+    Liquid error (temp/ai_gen_block_d7e4dc9 line 187): wrong number of arguments (given 3, expected 2)
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-luxury-feed-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding_top }}px 0 {{ block.settings.section_padding_bottom }}px;
+  }
+
+  .ai-luxury-feed__banner-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: {{ block.settings.banner_bg_color }};
+    padding: {{ block.settings.banner_padding_vertical }}px {{ block.settings.banner_padding_horizontal }}px;
+    text-align: {{ block.settings.banner_text_alignment }};
+  }
+
+  .ai-luxury-feed__banner-content-{{ ai_gen_id }} {
+    max-width: {{ block.settings.banner_max_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-luxury-feed__banner-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.banner_title_size }}px;
+    color: {{ block.settings.banner_text_color }};
+    margin: 0 0 {{ block.settings.banner_spacing }}px;
+    font-weight: {{ block.settings.banner_title_weight }};
+    letter-spacing: {{ block.settings.banner_letter_spacing }}px;
+    line-height: 1.3;
+  }
+
+  .ai-luxury-feed__banner-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.banner_text_size }}px;
+    color: {{ block.settings.banner_text_color }};
+    opacity: 0.9;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-luxury-feed__grid-container-{{ ai_gen_id }} {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: {{ block.settings.grid_padding_top }}px 0 {{ block.settings.grid_padding_bottom }}px;
+  }
+
+  .ai-luxury-feed__grid-container-{{ ai_gen_id }}::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ai-luxury-feed__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: {{ block.settings.item_width }}px;
+    gap: {{ block.settings.grid_gap }}px;
+    padding: 0 {{ block.settings.grid_side_padding }}px;
+    width: max-content;
+  }
+
+  .ai-luxury-feed__item-{{ ai_gen_id }} {
+    position: relative;
+    width: {{ block.settings.item_width }}px;
+    height: {{ block.settings.item_height }}px;
+    overflow: hidden;
+    border-radius: {{ block.settings.item_border_radius }}px;
+    background-color: {{ block.settings.item_bg_color }};
+  }
+
+  .ai-luxury-feed__media-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-luxury-feed__placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f1ed 0%, #e8dfd5 100%);
+    position: relative;
+  }
+
+  .ai-luxury-feed__placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-luxury-feed__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #8b7355;
+    text-align: center;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .ai-luxury-feed__overlay-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, {{ block.settings.overlay_opacity }}), transparent);
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-luxury-feed__item-{{ ai_gen_id }}:hover .ai-luxury-feed__overlay-{{ ai_gen_id }} {
+    opacity: 1;
+  }
+
+  .ai-luxury-feed__caption-{{ ai_gen_id }} {
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-luxury-feed__banner-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.banner_title_size }}px * 0.7);
+    }
+
+    .ai-luxury-feed__banner-text-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.banner_text_size }}px * 0.85);
+    }
+
+    .ai-luxury-feed__grid-{{ ai_gen_id }} {
+      grid-auto-columns: {{ block.settings.item_width_mobile }}px;
+      gap: {{ block.settings.grid_gap_mobile }}px;
+      padding: 0 {{ block.settings.grid_side_padding_mobile }}px;
+    }
+
+    .ai-luxury-feed__item-{{ ai_gen_id }} {
+      width: {{ block.settings.item_width_mobile }}px;
+      height: {{ block.settings.item_height_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<luxury-feed-{{ ai_gen_id }} class="ai-luxury-feed-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.show_banner %}
+    <div class="ai-luxury-feed__banner-{{ ai_gen_id }}">
+      <div class="ai-luxury-feed__banner-content-{{ ai_gen_id }}">
+        {% if block.settings.banner_title != blank %}
+          <h2 class="ai-luxury-feed__banner-title-{{ ai_gen_id }}">{{ block.settings.banner_title }}</h2>
+        {% endif %}
+        {% if block.settings.banner_text != blank %}
+          <div class="ai-luxury-feed__banner-text-{{ ai_gen_id }}">{{ block.settings.banner_text }}</div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="ai-luxury-feed__grid-container-{{ ai_gen_id }}">
+    <div class="ai-luxury-feed__grid-{{ ai_gen_id }}">
+      {% for i in (1..12) %}
+        {% liquid
+          assign image_key = 'media_' | append: i
+          assign caption_key = 'caption_' | append: i
+          assign video_key = 'video_' | append: i
+          assign media_type_key = 'media_type_' | append: i
+          
+          assign media_image = block.settings[image_key]
+          assign media_caption = block.settings[caption_key]
+          assign media_video = block.settings[video_key]
+          assign media_type = block.settings[media_type_key]
+        %}
+
+        <div class="ai-luxury-feed__item-{{ ai_gen_id }}">
+          {% if media_type == 'video' and media_video != blank %}
+            <video
+              class="ai-luxury-feed__media-{{ ai_gen_id }}"
+              autoplay
+              loop
+              muted
+              playsinline
+            >
+              {% for source in media_video.sources %}
+                <source src="{{ source.url }}" type="{{ source.mime_type }}">
+              {% endfor %}
+            </video>
+          {% elsif media_type == 'image' and media_image != blank %}
+            <img
+              class="ai-luxury-feed__media-{{ ai_gen_id }}"
+              src="{{ media_image | image_url: width: 800 }}"
+              alt="{{ media_image.alt | escape }}"
+              loading="lazy"
+              width="800"
+              height="800"
+            >
+          {% else %}
+            <div class="ai-luxury-feed__placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+              <div class="ai-luxury-feed__empty-state-{{ ai_gen_id }}">
+                Add media {{ i }}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if media_caption != blank and block.settings.show_captions %}
+            <div class="ai-luxury-feed__overlay-{{ ai_gen_id }}">
+              <p class="ai-luxury-feed__caption-{{ ai_gen_id }}">{{ media_caption }}</p>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</luxury-feed-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class LuxuryFeed{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.container = this.querySelector('.ai-luxury-feed__grid-container-{{ ai_gen_id }}');
+        this.videos = this.querySelectorAll('video');
+        
+        this.setupVideoPlayback();
+        this.setupScrollBehavior();
+      }
+
+      setupVideoPlayback() {
+        const options = {
+          root: this.container,
+          threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+              video.play().catch(() => {});
+            } else {
+              video.pause();
+            }
+          });
+        }, options);
+
+        this.videos.forEach(video => observer.observe(video));
+      }
+
+      setupScrollBehavior() {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        this.container.addEventListener('mousedown', (e) => {
+          isDown = true;
+          this.container.style.cursor = 'grabbing';
+          startX = e.pageX - this.container.offsetLeft;
+          scrollLeft = this.container.scrollLeft;
+        });
+
+        this.container.addEventListener('mouseleave', () => {
+          isDown = false;
+          this.container.style.cursor = 'grab';
+        });
+
+        this.container.addEventListener('mouseup', () => {
+          isDown = false;
+          this.container.style.cursor = 'grab';
+        });
+
+        this.container.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - this.container.offsetLeft;
+          const walk = (x - startX) * 2;
+          this.container.scrollLeft = scrollLeft - walk;
+        });
+      }
+    }
+
+    customElements.define('luxury-feed-{{ ai_gen_id }}', LuxuryFeed{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Luxury Instagram feed",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_banner",
+      "label": "Show banner",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "banner_title",
+      "label": "Title",
+      "default": "<p>Crafted with Heritage</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "banner_text",
+      "label": "Text",
+      "default": "<p>Discover the artistry behind our signature fragrances, where tradition meets modern luxury</p>"
+    },
+    {
+      "type": "select",
+      "id": "banner_text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "banner_max_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "banner_title_size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "banner_text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "banner_title_weight",
+      "label": "Title weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "300"
+    },
+    {
+      "type": "range",
+      "id": "banner_letter_spacing",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "px",
+      "label": "Letter spacing",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "banner_spacing",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Space between title and text",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "banner_padding_vertical",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "banner_padding_horizontal",
+      "min": 10,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "banner_bg_color",
+      "label": "Background color",
+      "default": "#f5f1ed"
+    },
+    {
+      "type": "color",
+      "id": "banner_text_color",
+      "label": "Text color",
+      "default": "#2c2420"
+    },
+    {
+      "type": "header",
+      "content": "Feed grid"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_captions",
+      "label": "Show captions on hover",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "item_width",
+      "min": 200,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Item width on desktop",
+      "default": 320
+    },
+    {
+      "type": "range",
+      "id": "item_height",
+      "min": 200,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Item height on desktop",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "item_width_mobile",
+      "min": 150,
+      "max": 350,
+      "step": 10,
+      "unit": "px",
+      "label": "Item width on mobile",
+      "default": 240
+    },
+    {
+      "type": "range",
+      "id": "item_height_mobile",
+      "min": 150,
+      "max": 450,
+      "step": 10,
+      "unit": "px",
+      "label": "Item height on mobile",
+      "default": 300
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 4,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between items on desktop",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "grid_gap_mobile",
+      "min": 4,
+      "max": 24,
+      "step": 4,
+      "unit": "px",
+      "label": "Gap between items on mobile",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "grid_side_padding",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Side padding on desktop",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "grid_side_padding_mobile",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Side padding on mobile",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "grid_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "grid_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "item_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Item border radius",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Overlay opacity",
+      "default": 0.7
+    },
+    {
+      "type": "color",
+      "id": "item_bg_color",
+      "label": "Item background color",
+      "default": "#f5f1ed"
+    },
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Media 1"
+    },
+    {
+      "type": "select",
+      "id": "media_type_1",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_1",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_1",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_1",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 2"
+    },
+    {
+      "type": "select",
+      "id": "media_type_2",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_2",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_2",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_2",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 3"
+    },
+    {
+      "type": "select",
+      "id": "media_type_3",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_3",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_3",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_3",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 4"
+    },
+    {
+      "type": "select",
+      "id": "media_type_4",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_4",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_4",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_4",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 5"
+    },
+    {
+      "type": "select",
+      "id": "media_type_5",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_5",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_5",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_5",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 6"
+    },
+    {
+      "type": "select",
+      "id": "media_type_6",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_6",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_6",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_6",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 7"
+    },
+    {
+      "type": "select",
+      "id": "media_type_7",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_7",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_7",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_7",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 8"
+    },
+    {
+      "type": "select",
+      "id": "media_type_8",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_8",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_8",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_8",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 9"
+    },
+    {
+      "type": "select",
+      "id": "media_type_9",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_9",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_9",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_9",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 10"
+    },
+    {
+      "type": "select",
+      "id": "media_type_10",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_10",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_10",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_10",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 11"
+    },
+    {
+      "type": "select",
+      "id": "media_type_11",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_11",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_11",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_11",
+      "label": "Caption"
+    },
+    {
+      "type": "header",
+      "content": "Media 12"
+    },
+    {
+      "type": "select",
+      "id": "media_type_12",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "media_12",
+      "label": "Image"
+    },
+    {
+      "type": "video",
+      "id": "video_12",
+      "label": "Video"
+    },
+    {
+      "type": "text",
+      "id": "caption_12",
+      "label": "Caption"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Luxury Instagram feed"
+    }
+  ]
+}
+{% endschema %}

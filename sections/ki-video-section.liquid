@@ -1,0 +1,83 @@
+<div id="" class="ki-container">
+  <div class="ki-video-container desktop">
+    <div class="ki-video-wrapper desktop video-section">
+      <div class="ki-video-overlay">
+        <div class="customvideo desktop">
+          <video class="ki-video" id="desktopVideo" src="{{ section.settings.desktop_video_url }}" muted
+            autoplay loop playsinline aria-label="Desktop Video"></video>
+        </div>
+
+        <div class="customvideo mobile">
+          <video class="ki-video" id="mobileVideo" src="{{ section.settings.mobile_video_url }}" muted autoplay
+            loop playsinline aria-label="Mobile Video"></video>
+        </div>
+      </div>
+
+      <div class="ki-block-image-content-container desktop bottom">
+        <div class="ki-block-image-contents desktop">
+          <h2 class=" ki-block-image-heading #ffffff" style="color:#ffffff">
+            {{ section.settings.banner_text | escape }}
+          </h2>
+        </div>
+        <div class="ki-block-contents desktop">
+          <a href="{{ section.settings.button_link }}" class="ki-btn ki-btn--white ">
+            {{- section.settings.button_text | escape -}}
+          </a>
+        </div>
+      </div>
+
+      <div class="ki-video-controls desktop">
+        <div class="pause-button playPauseImage1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="#FFF">
+            <path d="M23.3333 31.6666V8.33331H30V31.6666H23.3333ZM10 31.6666V8.33331H16.6667V31.6666H10Z"
+              fill="#F7F4EF"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Ki Video Section",
+"tag": "section",
+"class": "section",
+"disabled_on": {
+"groups": ["header", "footer"]
+},
+"settings": [
+{
+"type": "liquid",
+"id": "desktop_video_url",
+"label": "Desktop Video URL"
+},
+{
+"type": "liquid",
+"id": "mobile_video_url",
+"label": "Mobile Video URL"
+},
+{
+"type": "text",
+"id": "banner_text",
+"label": "Video Banner"
+},
+{
+"type": "text",
+"id": "button_text",
+"label": "button text"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "Link"
+}
+],
+"presets": [
+{
+"name": "Ki Video Section",
+"category": "Custom"
+}
+]
+}
+{% endschema %}
