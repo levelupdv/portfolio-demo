@@ -124,83 +124,76 @@
         "padding_bottom": 52
       }
     },
-    "blocks_fkyqh8": {
-      "type": "_blocks",
+    "instagram_feed_XCXjJd": {
+      "type": "instagram-feed",
       "blocks": {
-        "ai_gen_block_96909f9_gDqnqk": {
-          "type": "ai_gen_block_96909f9",
+        "instagram_video_pYJHRL": {
+          "type": "instagram_video",
           "settings": {
-            "show_banner": true,
-            "banner_title": "<p>Crafted with Heritage</p>",
-            "banner_text": "<p>Discover the artistry behind our signature fragrances, where tradition meets modern luxury</p>",
-            "banner_text_alignment": "center",
-            "banner_max_width": 1200,
-            "banner_title_size": 48,
-            "banner_text_size": 16,
-            "banner_title_weight": "300",
-            "banner_letter_spacing": 1,
-            "banner_spacing": 16,
-            "banner_padding_vertical": 20,
-            "banner_padding_horizontal": 10,
-            "banner_bg_color": "#faf3e1",
-            "banner_text_color": "#2c2420",
-            "show_captions": true,
-            "item_width": 320,
-            "item_height": 400,
-            "item_width_mobile": 240,
-            "item_height_mobile": 300,
-            "grid_gap": 4,
-            "grid_gap_mobile": 4,
-            "grid_side_padding": 0,
-            "grid_side_padding_mobile": 0,
-            "grid_padding_top": 0,
-            "grid_padding_bottom": 50,
-            "item_border_radius": 0,
-            "overlay_opacity": 0.7,
-            "item_bg_color": "#faf3e1",
-            "section_padding_top": 0,
-            "section_padding_bottom": 0,
-            "background_color": "#faf3e1",
-            "media_type_1": "image",
-            "media_1": "shopify://shop_images/Kiana_Mystere_Intime_N_16_From_the_depth_of_oud_and_the_charm_of_wood_emerges_a_fragrance_that.jpg",
-            "caption_1": "",
-            "media_type_2": "video",
-            "video_2": "shopify://files/videos/✨ بمناسبة يوم الاتحاد الـ54 ✨قدّمنا لكم باكج فاخر يجمع بين الذوق والرقي… لمسة تليق بالاحتفال برو.mp4",
-            "caption_2": "",
-            "media_type_3": "image",
-            "media_3": "shopify://shop_images/N_14_YN_Elevat.jpg",
-            "caption_3": "",
-            "media_type_4": "video",
-            "video_4": "shopify://files/videos/zdx.mp4",
-            "caption_4": "",
-            "media_type_5": "image",
-            "media_5": "shopify://shop_images/KIANA_pure_oud_elegance_in_every_breath..._KianaFragrance_L.jpg",
-            "caption_5": "",
-            "media_type_6": "video",
-            "video_6": "shopify://files/videos/✨ بمناسبة يوم الاتحاد الـ54 ✨قدّمنا لكم باكج فاخر يجمع بين الذوق والرقي… لمسة تليق بالاحتفال برو.mp4",
-            "caption_6": "",
-            "media_type_7": "image",
-            "media_7": "shopify://shop_images/Leather_Vanilla_Oud_and_amber.jpg",
-            "caption_7": "",
-            "media_type_8": "image",
-            "caption_8": "",
-            "media_type_9": "image",
-            "caption_9": "",
-            "media_type_10": "image",
-            "caption_10": "",
-            "media_type_11": "image",
-            "caption_11": "",
-            "media_type_12": "image",
-            "caption_12": ""
-          },
-          "blocks": {}
+            "video_file": "shopify://files/videos/zdx.mp4",
+            "autoplay": false,
+            "link": "https://www.instagram.com/p/DRUWEc4kib5/"
+          }
+        },
+        "instagram_post_zjKt8q": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify://shop_images/KIANA_pure_oud_elegance_in_every_breath..._KianaFragrance_L.jpg",
+            "link": ""
+          }
+        },
+        "instagram_video_LNpLj3": {
+          "type": "instagram_video",
+          "settings": {
+            "video_file": "shopify://files/videos/sdsd.mp4",
+            "autoplay": false,
+            "link": "https://www.instagram.com/p/DReLU07EdMg/"
+          }
+        },
+        "instagram_post_mNtBVM": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify://shop_images/N_14_YN_Elevat.jpg",
+            "link": ""
+          }
+        },
+        "instagram_video_99bxN3": {
+          "type": "instagram_video",
+          "settings": {
+            "video_file": "shopify://files/videos/✨ بمناسبة يوم الاتحاد الـ54 ✨قدّمنا لكم باكج فاخر يجمع بين الذوق والرقي… لمسة تليق بالاحتفال برو.mp4",
+            "autoplay": false,
+            "link": "https://www.instagram.com/p/DRMezaVGOx6/"
+          }
+        },
+        "instagram_post_QzHjy6": {
+          "type": "instagram_post",
+          "settings": {
+            "image": "shopify://shop_images/Kiana_Mystere_Intime_N_16_From_the_depth_of_oud_and_the_charm_of_wood_emerges_a_fragrance_that.jpg",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "ai_gen_block_96909f9_gDqnqk"
+        "instagram_video_pYJHRL",
+        "instagram_post_zjKt8q",
+        "instagram_video_LNpLj3",
+        "instagram_post_mNtBVM",
+        "instagram_video_99bxN3",
+        "instagram_post_QzHjy6"
       ],
-      "name": "Luxury Instagram feed",
-      "settings": {}
+      "name": "Instagram Feed",
+      "settings": {
+        "heading": "Crafted with Heritage",
+        "subheading": "Discover the artistry behind our signature fragrances, where tradition meets modern luxury",
+        "heading_color": "#ffffff",
+        "background_color": "#222222",
+        "columns_desktop": 6,
+        "columns_mobile": 1,
+        "grid_gap": 1,
+        "border_radius": 0,
+        "button_text": "",
+        "button_link": ""
+      }
     },
     "ki_newsletter_LwJeRj": {
       "type": "ki-newsletter",
@@ -251,7 +244,7 @@
     "ki_image_section_bbgxMd",
     "ki_featured_collection_3K63WK",
     "ki_rich_text_NLWVwn",
-    "blocks_fkyqh8",
+    "instagram_feed_XCXjJd",
     "ki_newsletter_LwJeRj",
     "main"
   ]
