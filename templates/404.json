@@ -124,75 +124,33 @@
         "padding_bottom": 52
       }
     },
-    "instagram_feed_XCXjJd": {
-      "type": "instagram-feed",
+    "1768647556569cc5ea": {
+      "type": "apps",
       "blocks": {
-        "instagram_video_pYJHRL": {
-          "type": "instagram_video",
+        "instafeed_app_block_BYfMRm": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "video_file": "shopify://files/videos/zdx.mp4",
-            "autoplay": false,
-            "link": "https://www.instagram.com/p/DRUWEc4kib5/"
-          }
-        },
-        "instagram_post_zjKt8q": {
-          "type": "instagram_post",
-          "settings": {
-            "image": "shopify://shop_images/KIANA_pure_oud_elegance_in_every_breath..._KianaFragrance_L.jpg",
-            "link": ""
-          }
-        },
-        "instagram_video_LNpLj3": {
-          "type": "instagram_video",
-          "settings": {
-            "video_file": "shopify://files/videos/sdsd.mp4",
-            "autoplay": false,
-            "link": "https://www.instagram.com/p/DReLU07EdMg/"
-          }
-        },
-        "instagram_post_mNtBVM": {
-          "type": "instagram_post",
-          "settings": {
-            "image": "shopify://shop_images/N_14_YN_Elevat.jpg",
-            "link": ""
-          }
-        },
-        "instagram_video_99bxN3": {
-          "type": "instagram_video",
-          "settings": {
-            "video_file": "shopify://files/videos/✨ بمناسبة يوم الاتحاد الـ54 ✨قدّمنا لكم باكج فاخر يجمع بين الذوق والرقي… لمسة تليق بالاحتفال برو.mp4",
-            "autoplay": false,
-            "link": "https://www.instagram.com/p/DRMezaVGOx6/"
-          }
-        },
-        "instagram_post_QzHjy6": {
-          "type": "instagram_post",
-          "settings": {
-            "image": "shopify://shop_images/Kiana_Mystere_Intime_N_16_From_the_depth_of_oud_and_the_charm_of_wood_emerges_a_fragrance_that.jpg",
-            "link": ""
+            "title": "Crafted with Heritage",
+            "title_color": "#ffffff",
+            "title_size_v2": 32,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "#222222",
+            "feed_id": "",
+            "html_area": ""
           }
         }
       },
       "block_order": [
-        "instagram_video_pYJHRL",
-        "instagram_post_zjKt8q",
-        "instagram_video_LNpLj3",
-        "instagram_post_mNtBVM",
-        "instagram_video_99bxN3",
-        "instagram_post_QzHjy6"
+        "instafeed_app_block_BYfMRm"
       ],
-      "name": "Instagram Feed",
       "settings": {
-        "heading": "Crafted with Heritage",
-        "subheading": "Discover the artistry behind our signature fragrances, where tradition meets modern luxury",
-        "heading_color": "#ffffff",
-        "background_color": "#222222",
-        "columns_desktop": 6,
-        "columns_mobile": 1,
-        "grid_gap": 1,
-        "border_radius": 0,
-        "button_text": "",
-        "button_link": ""
+        "include_margins": true
       }
     },
     "ki_newsletter_LwJeRj": {
@@ -244,7 +202,7 @@
     "ki_image_section_bbgxMd",
     "ki_featured_collection_3K63WK",
     "ki_rich_text_NLWVwn",
-    "instagram_feed_XCXjJd",
+    "1768647556569cc5ea",
     "ki_newsletter_LwJeRj",
     "main"
   ]
