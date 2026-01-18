@@ -44,8 +44,8 @@
   --text-20: 20px;
   --colorBlack: #000000;
   --colorlightBlack: #353535;
-  --header-height-desktop: 170px;
-  --header-height-mobile: 118px;
+  --header-height-desktop: 171px;
+  --header-height-mobile: 119px;
   --transition-timing: .15s;
   --bg-color: #1d1d1d;
   --light-color: #444;
@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 440px) {
   :root {
-    --header-height-mobile: 118px;
+    --header-height-mobile: 119px;
     --header-height-desktop: var(--header-height-mobile);
   }
 }

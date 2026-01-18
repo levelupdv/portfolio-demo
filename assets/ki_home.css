@@ -896,3 +896,24 @@ footer .list-social__item .icon {
   fill: var(--icon-color);
   transform: rotate(-45deg);
 }
+
+/* instafeed */
+
+#shopify-section-template--25389194281003__176876431772c0512d > div {
+    max-width: 100%;
+    padding: 0px;
+}
+
+#insta-feed {
+    padding: 60px 0px 60px;
+}
+
+#insta-feed h2 {
+    text-align: center;
+    font-family: Gotham-Book;
+    font-size: var(--heading);
+    line-height: 32px;
+    text-transform: uppercase;
+    margin: 0px !important;
+    padding-bottom: 60px;
+}

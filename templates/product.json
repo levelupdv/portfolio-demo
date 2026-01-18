@@ -55,10 +55,13 @@
             "layout": "horizontal",
             "icon_1": "perfume",
             "heading_1": "Complimentary Samples",
+            "subheading_1": "",
             "icon_2": "box",
             "heading_2": "Gift Wrapping",
+            "subheading_2": "",
             "icon_3": "truck",
-            "heading_3": "Customer Service"
+            "heading_3": "Customer Service",
+            "subheading_3": ""
           }
         }
       },

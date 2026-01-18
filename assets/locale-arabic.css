@@ -256,3 +256,14 @@
     padding-left: 40px;
 }
 }
+
+/* product page */
+
+.locale-arabic {
+  .ki-product.product--large:not(.product--no-media) .product__info-wrapper {
+    padding: 0 152px 0 0;
+}
+.badge {
+    margin: 22px 22px 0 0;
+}
+}
